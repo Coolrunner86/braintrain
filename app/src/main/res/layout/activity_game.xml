@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.coolrunner86.braintrain.GameActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="@string/undo"
+            android:id="@+id/undoBtn"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"/>
+        <Button
+            android:text="@string/next"
+            android:layout_gravity="right"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/nextBtn"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+    <com.github.coolrunner86.braintrain.DataView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dataView"/>
+
+</LinearLayout>

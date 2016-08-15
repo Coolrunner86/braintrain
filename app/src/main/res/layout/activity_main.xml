@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    tools:context=".MainActivity"
+    >
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/resume_game"
+        android:id="@+id/resumeGameBtn"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"
+        />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/new_game"
+        android:id="@+id/newGameBtn"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/load_game"
+        android:id="@+id/loadGameBtn"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/save_game"
+        android:id="@+id/saveGameBtn"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"
+        />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/highscores"
+        android:id="@+id/highscoresBtn"
+        android:layout_gravity="center_horizontal"
+        android:enabled="true"
+        />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/about"
+        android:id="@+id/aboutBtn"
+        android:layout_gravity="center_horizontal"
+        android:enabled="true"
+        />
+
+</LinearLayout>
