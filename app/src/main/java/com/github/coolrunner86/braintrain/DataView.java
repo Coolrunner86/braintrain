@@ -19,7 +19,7 @@ import java.util.List;
  * Created by flex on 04.08.16.
  */
 public class DataView extends View {
-    public static final int DIGITS_IN_ROW = 9;
+    public static final int DIGITS_IN_ROW = 9;//TODO move this constant somewhere else
     private static final String TAG = "DataView";
 
     private List<Byte> data;
@@ -123,6 +123,8 @@ public class DataView extends View {
 
         if(totalHeight < getHeight())
             totalHeight = getHeight();
+
+        setScrollY(totalHeight + getTop() - getHeight());
 
         invalidate();
     }
@@ -332,7 +334,7 @@ public class DataView extends View {
             motionBeginY = event.getY();
         }
 
-        if((totalHeight - getScrollY()) < getHeight())
+        if(((totalHeight + getTop()) - getScrollY()) < getHeight())
         {
             Log.d(TAG, "performMove: totalHeight = " + totalHeight + ", getHeight() = " + getHeight());
             setScrollY(totalHeight + getTop() - getHeight());

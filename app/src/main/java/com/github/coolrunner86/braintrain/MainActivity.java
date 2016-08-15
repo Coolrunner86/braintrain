@@ -31,13 +31,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         temp = (Button) findViewById(R.id.saveGameBtn);
         temp.setOnClickListener(this);
+
+        temp = (Button) findViewById(R.id.highscoresBtn);
+        temp.setOnClickListener(this);
+
+        temp = (Button) findViewById(R.id.aboutBtn);
+        temp.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch(view.getId()) {
             case R.id.newGameBtn:
-                Intent intent = new Intent(this, GameActivity.class);
+                Intent intent = new Intent(this, DifficultyActivity.class);
                 startActivity(intent);
                 break;
 
@@ -46,6 +52,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.loadGameBtn:
                 break;
             case R.id.saveGameBtn:
+                break;
+
+            case R.id.aboutBtn:
+                break;
+            case R.id.highscoresBtn:
                 break;
         }
     }

@@ -136,6 +136,28 @@ public class GameActivity extends Activity implements DataView.OnCellClickListen
             secondIndex = tmp;
         }
 
+        if(isIndicesVertical(firstIndex, secondIndex) || isIndicesHorizontal(firstIndex, secondIndex))
+            return true;
+
+        return false;
+    }
+
+    private boolean isIndicesVertical(int firstIndex, int secondIndex) {
+        do {
+            firstIndex += DataView.DIGITS_IN_ROW;
+
+            if(dataManager.getValues().get(firstIndex) != 0)
+                break;
+
+        } while(firstIndex < secondIndex);
+
+        if(firstIndex == secondIndex)
+            return true;
+
+        return false;
+    }
+
+    private boolean isIndicesHorizontal(int firstIndex, int secondIndex) {
         do {
             firstIndex++;
 
